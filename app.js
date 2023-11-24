@@ -28,27 +28,20 @@ window.addEventListener("load", () => {
                 if (!results) return alert(`no coordinate for ${cityName}`)
                 const { name, lat, lon } = results[0];
                 getWeatherDetails(cityName, fullName, countryCode, lat, lon);
-                console.log(results)
-
 
                 fetch(`https://restcountries.com/v3.1/name/${countryCode}`).then(res => res.json()).then(dataa => {
                     let x = dataa[0]
                     paragph.textContent = (`The Capital of ${x.name.common} is ${x.capital}, It is in the ${x.continents} continent. Thier Population is ${x.population}.  `)
 
                 })
-               
-            
             })
-
         }
 
         catch (error) {
             alert("An error ocuurred while fetching the coordinates")
         }
-       
 
        
-
         async function getWeatherDetails(cityName, fullName, countryCode, lat, lon) {
             try {
                 let weatherUrl_API = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${AP1_KEY}`
@@ -82,9 +75,7 @@ window.addEventListener("load", () => {
             }
             catch (error) { alert("An Error occur while fetching weather details") }
     
-    
-    
-    
+
             const createWeatherCard = (cityName, weatherItem, fullName, countryCode, index) => {
                 if (index === 0) {
     
