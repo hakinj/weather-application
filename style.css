@@ -190,7 +190,7 @@ footer{
         width: 150px;
     }
     .weather-cards{
-        margin-left: -40px;
+        margin-left: -35px;
 
     }
     .days-forecast h2{
@@ -203,6 +203,9 @@ footer{
         margin-top: -5px;
     }
     .main-container .weather-input{
+        margin-left: -20px;
+    }
+    .days-forecast h2 {
         margin-left: -20px;
     }
 
